@@ -4,26 +4,26 @@ export const steps = [
   {
     stepId: 0,
     stepName: "Personal details",
-    component: PersonalDetailsStep,
+    // component: PersonalDetailsStep,
   },
   {
     stepId: 1,
     stepName: "Bio",
-    component: BioStep,
+    // component: BioStep,
   },
   {
     stepId: 2,
     stepName: "WorkExperience",
-    component: WorkExperienceStep,
+    // component: WorkExperienceStep,
   },
   {
     stepId: 3,
     stepName: "Projects",
-    component: ProjectsStep,
+    // component: ProjectsStep,
   },
   {
     stepId: 4,
     stepName: "Education",
-    component: EducationStep,
+    // component: EducationStep,
   },
 ];
