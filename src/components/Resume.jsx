@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DateRangeFormatted from "./DateRangeFormatted";
 
 export default function Resume({ formData }) {
   return (
@@ -32,9 +33,7 @@ export default function Resume({ formData }) {
           <div key={workExperience.id}>
             <div className="section-row">
               <p className="job-title">{workExperience.jobTitle}</p>
-              <p className="experience-time">
-                {workExperience.startDate} - {workExperience.endDate}
-              </p>
+              <DateRangeFormatted startDate={workExperience.startDate} endDate={workExperience.endDate} />
             </div>
             <div className="company-and-location">
               <p className="company-name">{workExperience.companyName}</p>
