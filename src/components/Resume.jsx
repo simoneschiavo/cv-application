@@ -27,9 +27,18 @@ export default function Resume({ formData }) {
         <p className="bio">{formData.bio}</p>
           </section>
           <section className="work-experience">
+              <p className="section-title">Work Experience</p>
               {formData.workExperiences.map((workExperience) => (
                   <div key={workExperience.id}>
-                      <p className="company-name">{workExperience.companyName}</p>
+                      <div className="section-row">
+                          <p className="job-title">{workExperience.jobTitle}</p>
+                          <p className="experience-time">{workExperience.startDate} - {workExperience.endDate}</p>
+                      </div>
+                      <div className="company-and-location">
+                          <p className="company-name">{workExperience.companyName}</p>
+                          <p className="work-location">{ workExperience.workLocation === '' ? workExperience.workLocation : "| " + workExperience.workLocation}</p>
+                      </div>
+                      <p className="description">{workExperience.description}</p>
                   </div>
               ))}
           </section>
