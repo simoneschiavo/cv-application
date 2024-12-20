@@ -66,6 +66,16 @@ function App() {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleArrayChange = (arrayName, index, field, value) => {
+    setFormData((prevFormData) => {
+      const updatedArray = prevFormData[arrayName].map((item, i) =>
+        i === index ? { ...item, [field]: value } : item
+      );
+
+      return { ...prevFormData, [arrayName]: updatedArray };
+    });
+  };
+
   let hasBack = currentStep > 0;
   let hasNext = currentStep < steps.length - 1;
 
@@ -78,6 +88,7 @@ function App() {
           <CurrentStepComponent
             formData={formData}
             handleChange={handleChange}
+            handleArrayChange={handleArrayChange}
           />
           <div className="buttons-wrapper">
             <button onClick={handleBack} disabled={!hasBack}>
