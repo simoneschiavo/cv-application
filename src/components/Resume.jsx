@@ -62,6 +62,20 @@ export default function Resume({ formData }) {
           </div>
         ))}
       </section>
+      <section className="educations">
+        <p className="section-title">Education</p>
+        {formData.educations.map((education) => (
+          <div key={education.id}>
+            <div className="section-row">
+              <p className="institution-name">{education.institutionName}</p>
+              <p className="institution-time">
+                {education.startDate} - {education.endDate}
+              </p>
+            </div>
+            <p className="name">{education.name}</p>
+          </div>
+        ))}
+      </section>
     </>
   );
 }
