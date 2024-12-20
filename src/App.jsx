@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import { steps } from "./components/form/steps";
+import Resume from "./components/Resume";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -60,7 +61,7 @@ function App() {
     }
   };
 
-  const handleChange = () => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -74,7 +75,10 @@ function App() {
       Form Steps
       <main>
         <section className="steps-data">
-          <CurrentStepComponent formData={formData} handleChange={handleChange} />
+          <CurrentStepComponent
+            formData={formData}
+            handleChange={handleChange}
+          />
           <div className="buttons-wrapper">
             <button onClick={handleBack} disabled={!hasBack}>
               Back
@@ -84,7 +88,9 @@ function App() {
             </button>
           </div>
         </section>
-        <section>{/* <Resume formData={formData} /> */}</section>
+        <section>
+          <Resume formData={formData} />
+        </section>
       </main>
     </>
   );
