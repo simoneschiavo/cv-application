@@ -25,7 +25,14 @@ export default function Resume({ formData }) {
           </p>
         </div>
         <p className="bio">{formData.bio}</p>
-      </section>
+          </section>
+          <section className="work-experience">
+              {formData.workExperiences.map((workExperience) => (
+                  <div key={workExperience.id}>
+                      <p className="company-name">{workExperience.companyName}</p>
+                  </div>
+              ))}
+          </section>
     </>
   );
 }

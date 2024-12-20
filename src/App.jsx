@@ -16,7 +16,7 @@ function App() {
     address: "",
     phoneNumber: "",
     bio: "",
-    workExperience: [
+    workExperiences: [
       {
         id: uuidv4(),
         jobTitle: "",
@@ -36,7 +36,7 @@ function App() {
         description: "",
       },
     ],
-    education: [
+    educations: [
       {
         id: uuidv4(),
         institutionName: "",
