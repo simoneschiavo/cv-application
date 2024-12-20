@@ -3,6 +3,7 @@ export default function WorkExperienceStep({
   handleChange,
   handleArrayChange,
   removeArrayItem,
+  addArrayItem,
 }) {
   return (
     <>
@@ -108,6 +109,21 @@ export default function WorkExperienceStep({
           </button>
         </div>
       ))}
+      <button
+        onClick={() =>
+          addArrayItem("workExperiences", {
+            id: uuidv4(),
+            jobTitle: "",
+            companyName: "",
+            workLocation: "",
+            startDate: "",
+            endDate: "",
+            description: "",
+          })
+        }
+      >
+        Add work experience
+      </button>
     </>
   );
 }
