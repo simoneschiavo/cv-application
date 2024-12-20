@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import { steps } from "./components/form/steps";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -45,12 +46,24 @@ function App() {
     ],
   });
 
+  const CurrentStepComponent = steps[currentStep].component;
+
   return (
     <>
       <Header currentStep={currentStep} />
-      {/* Form Steps
-      Buttons (back, next, submit)
-      <Resume formData = { formData } /> */}
+      Form Steps
+      <main>
+        <section className="steps-data">
+          <CurrentStepComponent formData={formData} />
+          <div className="buttons-wrapper">
+            <button>Back</button>
+            <button>Next</button>
+          </div>
+        </section>
+        <section>
+          <Resume formData={formData} />
+        </section>
+      </main>
     </>
   );
 }
