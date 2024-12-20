@@ -25,23 +25,43 @@ export default function Resume({ formData }) {
           </p>
         </div>
         <p className="bio">{formData.bio}</p>
-          </section>
-          <section className="work-experience">
-              <p className="section-title">Work Experience</p>
-              {formData.workExperiences.map((workExperience) => (
-                  <div key={workExperience.id}>
-                      <div className="section-row">
-                          <p className="job-title">{workExperience.jobTitle}</p>
-                          <p className="experience-time">{workExperience.startDate} - {workExperience.endDate}</p>
-                      </div>
-                      <div className="company-and-location">
-                          <p className="company-name">{workExperience.companyName}</p>
-                          <p className="work-location">{ workExperience.workLocation === '' ? workExperience.workLocation : "| " + workExperience.workLocation}</p>
-                      </div>
-                      <p className="description">{workExperience.description}</p>
-                  </div>
-              ))}
-          </section>
+      </section>
+      <section className="work-experience">
+        <p className="section-title">Work Experience</p>
+        {formData.workExperiences.map((workExperience) => (
+          <div key={workExperience.id}>
+            <div className="section-row">
+              <p className="job-title">{workExperience.jobTitle}</p>
+              <p className="experience-time">
+                {workExperience.startDate} - {workExperience.endDate}
+              </p>
+            </div>
+            <div className="company-and-location">
+              <p className="company-name">{workExperience.companyName}</p>
+              <p className="work-location">
+                {workExperience.workLocation === ""
+                  ? workExperience.workLocation
+                  : "| " + workExperience.workLocation}
+              </p>
+            </div>
+            <p className="description">{workExperience.description}</p>
+          </div>
+        ))}
+      </section>
+      <section className="projects">
+        <p className="section-title">Projects</p>
+        {formData.projects.map((project) => (
+          <div key={project.id}>
+            <div className="section-row">
+              <p className="project-title">{project.title}</p>
+              <p className="project-time">
+                {project.startDate} - {project.endDate}
+              </p>
+            </div>
+            <p className="description">{project.description}</p>
+          </div>
+        ))}
+      </section>
     </>
   );
 }
