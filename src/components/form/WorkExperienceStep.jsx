@@ -11,8 +11,8 @@ export default function WorkExperienceStep({
         <p className="subtitle">Write down your work experience history</p>
       </div>
       {formData.workExperiences.map((workExperience, index) => (
-        <>
-          <form className="work-experience-step" key={workExperience.id}>
+        <div key={workExperience.id}>
+          <form className="work-experience-step">
             <div className="row">
               <div className="field we company-name">
                 <label htmlFor="companyName">Company</label>
@@ -106,7 +106,7 @@ export default function WorkExperienceStep({
           <button onClick={() => removeArrayItem("workExperiences", index)}>
             Delete
           </button>
-        </>
+        </div>
       ))}
     </>
   );
