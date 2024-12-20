@@ -60,6 +60,9 @@ function App() {
     }
   }
 
+  let hasBack = currentStep > 0;
+  let hasNext = currentStep < steps.length - 1;
+
   return (
     <>
       <Header currentStep={currentStep} />
@@ -68,8 +71,8 @@ function App() {
         <section className="steps-data">
           <CurrentStepComponent formData={formData} />
           <div className="buttons-wrapper">
-            <button onClick={handleBack}>Back</button>
-            <button onClick={handleNext}>Next</button>
+            <button onClick={handleBack} disabled={!hasBack}>Back</button>
+            <button onClick={handleNext} disabled={!hasNext}>Next</button>
           </div>
         </section>
         <section>
