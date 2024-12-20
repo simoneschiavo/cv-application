@@ -83,6 +83,13 @@ function App() {
     }));
   };
 
+  const addArrayItem = (arrayName, newItem) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [arrayName]: [...prevFormData[arrayName], newItem],
+    }));
+  };
+
   let hasBack = currentStep > 0;
   let hasNext = currentStep < steps.length - 1;
 
@@ -97,6 +104,7 @@ function App() {
             handleChange={handleChange}
             handleArrayChange={handleArrayChange}
             removeArrayItem={removeArrayItem}
+            addArrayItem={addArrayItem}
           />
           <div className="buttons-wrapper">
             <button onClick={handleBack} disabled={!hasBack}>
