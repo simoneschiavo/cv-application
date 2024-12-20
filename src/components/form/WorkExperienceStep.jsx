@@ -14,6 +14,23 @@ export default function WorkExperienceStep({
       {formData.workExperiences.map((workExperience, index) => (
         <div key={workExperience.id}>
           <form className="work-experience-step">
+            <div className="field we job-title">
+              <label htmlFor="jobTitle">Role</label>
+              <input
+                type="text"
+                name="jobTitle"
+                id="jobTitle"
+                value={workExperience.jobTitle}
+                onChange={(e) =>
+                  handleArrayChange(
+                    "workExperiences",
+                    index,
+                    "jobTitle",
+                    e.target.value
+                  )
+                }
+              />
+            </div>
             <div className="row">
               <div className="field we company-name">
                 <label htmlFor="companyName">Company</label>
@@ -32,18 +49,18 @@ export default function WorkExperienceStep({
                   }
                 />
               </div>
-              <div className="field we job-title">
-                <label htmlFor="jobTitle">Role</label>
+              <div className="field we work-location">
+                <label htmlFor="workLocation">Location</label>
                 <input
                   type="text"
-                  name="jobTitle"
-                  id="jobTitle"
-                  value={workExperience.jobTitle}
+                  name="workLocation"
+                  id="workLocation"
+                  value={workExperience.workLocation}
                   onChange={(e) =>
                     handleArrayChange(
                       "workExperiences",
                       index,
-                      "jobTitle",
+                      "workLocation",
                       e.target.value
                     )
                   }
