@@ -48,13 +48,13 @@ function App() {
 
   const CurrentStepComponent = steps[currentStep].component;
 
-  const handleNext() {
+  const handleNext = () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep((prev) => prev + 1);
     }
   }
 
-  const handleBack() {
+  const handleBack = () => {
     if (currentStep > 0) {
       setCurrentStep((prev) => prev - 1);
     }
