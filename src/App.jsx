@@ -48,6 +48,18 @@ function App() {
 
   const CurrentStepComponent = steps[currentStep].component;
 
+  const handleNext() {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep((prev) => prev + 1);
+    }
+  }
+
+  const handleBack() {
+    if (currentStep > 0) {
+      setCurrentStep((prev) => prev - 1);
+    }
+  }
+
   return (
     <>
       <Header currentStep={currentStep} />
@@ -56,12 +68,12 @@ function App() {
         <section className="steps-data">
           <CurrentStepComponent formData={formData} />
           <div className="buttons-wrapper">
-            <button>Back</button>
-            <button>Next</button>
+            <button onClick={handleBack}>Back</button>
+            <button onClick={handleNext}>Next</button>
           </div>
         </section>
         <section>
-          <Resume formData={formData} />
+          {/* <Resume formData={formData} /> */}
         </section>
       </main>
     </>
