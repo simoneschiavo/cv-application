@@ -52,13 +52,18 @@ function App() {
     if (currentStep < steps.length - 1) {
       setCurrentStep((prev) => prev + 1);
     }
-  }
+  };
 
   const handleBack = () => {
     if (currentStep > 0) {
       setCurrentStep((prev) => prev - 1);
     }
-  }
+  };
+
+  const handleChange = () => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   let hasBack = currentStep > 0;
   let hasNext = currentStep < steps.length - 1;
@@ -69,15 +74,17 @@ function App() {
       Form Steps
       <main>
         <section className="steps-data">
-          <CurrentStepComponent formData={formData} />
+          <CurrentStepComponent formData={formData} handleChange={handleChange} />
           <div className="buttons-wrapper">
-            <button onClick={handleBack} disabled={!hasBack}>Back</button>
-            <button onClick={handleNext} disabled={!hasNext}>Next</button>
+            <button onClick={handleBack} disabled={!hasBack}>
+              Back
+            </button>
+            <button onClick={handleNext} disabled={!hasNext}>
+              Next
+            </button>
           </div>
         </section>
-        <section>
-          {/* <Resume formData={formData} /> */}
-        </section>
+        <section>{/* <Resume formData={formData} /> */}</section>
       </main>
     </>
   );
