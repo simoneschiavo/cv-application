@@ -3,6 +3,7 @@ import PersonalDetailsStep from "./PersonalDetailsStep";
 import BioStep from "./BioStep";
 import WorkExperienceStep from "./WorkExperienceStep";
 import ProjectsStep from "./ProjectsStep";
+import EducationStep from "./EducationStep";
 
 export const steps = [
   {
@@ -28,6 +29,6 @@ export const steps = [
   {
     stepId: 4,
     stepName: "Education",
-    // component: EducationStep,
+    component: EducationStep,
   },
 ];

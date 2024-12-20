@@ -14,7 +14,7 @@ export default function ProjectsStep({
       </div>
       {formData.projects.map((project, index) => (
         <div key={project.id}>
-          <form action="project-step">
+          <form className="project-step">
             <div className="field pj title">
               <label htmlFor="title">Project Name</label>
               <input
