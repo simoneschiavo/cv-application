@@ -1,10 +1,11 @@
 // Will need to import the step components here
+import PersonalDetailsStep from "./PersonalDetailsStep";
 
 export const steps = [
   {
     stepId: 0,
     stepName: "Personal details",
-    // component: PersonalDetailsStep,
+    component: PersonalDetailsStep,
   },
   {
     stepId: 1,
