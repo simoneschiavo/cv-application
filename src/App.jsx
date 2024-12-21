@@ -113,18 +113,16 @@ function App() {
             >
               Back
             </button>
-            {hasNext && (
-              <button
-                className="next-button"
-                onClick={handleNext}
-                disabled={!hasNext}
-              >
-                Next
-              </button>
-            )}
+            <button
+              className="next-button"
+              onClick={handleNext}
+              disabled={!hasNext}
+            >
+              Next
+            </button>
           </div>
         </section>
-        <section className="resume" >
+        <section className="resume">
           <Resume formData={formData} />
         </section>
       </main>
