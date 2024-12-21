@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { CircleX } from "lucide-react";
 
 export default function WorkExperienceStep({
   formData,
@@ -13,7 +14,7 @@ export default function WorkExperienceStep({
         <p className="subtitle">Write down your work experience history</p>
       </div>
       {formData.workExperiences.map((workExperience, index) => (
-        <div key={workExperience.id}>
+        <div className="form-wrapper" key={workExperience.id}>
           <form className="work-experience-step">
             <div className="field we job-title">
               <label htmlFor="jobTitle">Role</label>
@@ -122,12 +123,11 @@ export default function WorkExperienceStep({
               ></textarea>
             </div>
           </form>
-          <button
+          <CircleX
+            size={24}
             className="delete-button"
             onClick={() => removeArrayItem("workExperiences", index)}
-          >
-            Delete
-          </button>
+          />
         </div>
       ))}
       <button

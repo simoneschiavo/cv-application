@@ -13,7 +13,7 @@ export default function ProjectsStep({
         <p className="subtitle">Think about particular projects to highlight</p>
       </div>
       {formData.projects.map((project, index) => (
-        <div key={project.id}>
+        <div className="form-wrapper" key={project.id}>
           <form className="project-step">
             <div className="field pj title">
               <label htmlFor="title">Project Name</label>
@@ -81,12 +81,11 @@ export default function ProjectsStep({
               ></textarea>
             </div>
           </form>
-          <button
+          <CircleX
+            size={24}
             className="delete-button"
-            onClick={() => removeArrayItem("projects", index)}
-          >
-            Delete
-          </button>
+            onClick={() => removeArrayItem("workExperiences", index)}
+          />
         </div>
       ))}
       <button

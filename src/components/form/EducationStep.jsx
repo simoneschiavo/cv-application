@@ -15,7 +15,7 @@ export default function EducationStep({
         </p>
       </div>
       {formData.educations.map((education, index) => (
-        <div key={education.id}>
+        <div className="form-wrapper" key={education.id}>
           <form className="education-step">
             <div className="field ed institution-name">
               <label htmlFor="institutionName">Institution name</label>
@@ -83,12 +83,11 @@ export default function EducationStep({
               />
             </div>
           </form>
-          <button
+          <CircleX
+            size={24}
             className="delete-button"
-            onClick={() => removeArrayItem("educations", index)}
-          >
-            Delete
-          </button>
+            onClick={() => removeArrayItem("workExperiences", index)}
+          />
         </div>
       ))}
       <button
