@@ -45,6 +45,14 @@ main {
   grid-template-columns: 3fr 1fr;
   gap: 1rem;
   align-items: start;
+  border-radius: 20px;
+  transition: background-color 500ms ease;
+  transition: padding 500ms ease;
+}
+
+.form-wrapper.hovered {
+  background-color: #ffdddd;
+  padding-left: 2rem;
 }
 
 form {
@@ -94,7 +102,7 @@ button:disabled {
 }
 
 .delete-button {
-  margin-top: 2rem;
+  margin: 2rem 0.5rem 0 0;
   margin-left: auto;
   color: #b5b5b5;
 }

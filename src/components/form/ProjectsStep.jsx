@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { CircleX } from "lucide-react";
 
 export default function ProjectsStep({
   formData,
@@ -6,6 +7,14 @@ export default function ProjectsStep({
   removeArrayItem,
   addArrayItem,
 }) {
+  const handleMouseEnter = (index) => {
+    document.querySelectorAll(".form-wrapper")[index].classList.add("hovered");
+  };
+
+  const handleMouseLeave = (index) => {
+    document.querySelectorAll(".form-wrapper")[index].classList.remove("hovered");
+  };
+
   return (
     <>
       <div className="title">
@@ -85,6 +94,8 @@ export default function ProjectsStep({
             size={24}
             className="delete-button"
             onClick={() => removeArrayItem("workExperiences", index)}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
           />
         </div>
       ))}

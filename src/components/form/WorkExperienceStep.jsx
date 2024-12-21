@@ -7,6 +7,14 @@ export default function WorkExperienceStep({
   removeArrayItem,
   addArrayItem,
 }) {
+  const handleMouseEnter = (index) => {
+    document.querySelectorAll(".form-wrapper")[index].classList.add("hovered");
+  };
+
+  const handleMouseLeave = (index) => {
+    document.querySelectorAll(".form-wrapper")[index].classList.remove("hovered");
+  };
+
   return (
     <>
       <div className="title">
@@ -127,6 +135,8 @@ export default function WorkExperienceStep({
             size={24}
             className="delete-button"
             onClick={() => removeArrayItem("workExperiences", index)}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
           />
         </div>
       ))}
