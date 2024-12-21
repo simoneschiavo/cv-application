@@ -24,7 +24,7 @@ header > div {
   padding: 0.5rem 2rem;
   flex: 0 1 auto;
   text-align: center;
-  min-width: 150px;
+  min-width: 100px;
 }
 
 header > div:first-child {
@@ -241,4 +241,16 @@ section.educations {
   display: flex;
   gap: 0.25rem;
   font-style: italic;
+}
+
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
 }
