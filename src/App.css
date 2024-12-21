@@ -16,6 +16,9 @@ header {
   justify-content: center;
   padding: 2rem 0;
   border-bottom: 1px solid #f4f4f4;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 
 header > div {
