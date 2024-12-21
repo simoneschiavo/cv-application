@@ -10,7 +10,7 @@ export default function DateRangeFormatted({ startDate, endDate }) {
   return (
     <>
       <p className="date-range">
-        {startDate === '' ? '' : formatDate(startDate)} -{" "}
+        {startDate === "" ? "" : formatDate(startDate)} -{" "}
         {endDate === "" ? "Present" : formatDate(endDate)}
       </p>
     </>
