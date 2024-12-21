@@ -246,6 +246,7 @@ section.educations {
   font-style: italic;
 }
 
+/* Tablet and mobile */
 @media (max-width: 1200px) {
   main {
     grid-template-columns: 1fr;

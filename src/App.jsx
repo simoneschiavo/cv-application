@@ -90,10 +90,6 @@ function App() {
     }));
   };
 
-  const handlePrint = () => {
-    window.print();
-  };
-
   let hasBack = currentStep > 0;
   let hasNext = currentStep < steps.length - 1;
 
@@ -126,14 +122,9 @@ function App() {
                 Next
               </button>
             )}
-            {!hasNext && (
-              <button className="print-button" onClick={handlePrint}>
-                Print
-              </button>
-            )}
           </div>
         </section>
-        <section className="resume">
+        <section className="resume" >
           <Resume formData={formData} />
         </section>
       </main>
