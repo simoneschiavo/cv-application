@@ -64,6 +64,7 @@ export default function ProjectsStep({
               </div>
             </div>
             <div className="field pj description">
+              <label htmlFor="description">Achievements</label>
               <textarea
                 name="description"
                 id="description"
