@@ -90,6 +90,10 @@ function App() {
     }));
   };
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   let hasBack = currentStep > 0;
   let hasNext = currentStep < steps.length - 1;
 
@@ -106,12 +110,27 @@ function App() {
             addArrayItem={addArrayItem}
           />
           <div className="buttons-wrapper">
-            <button className="back-button" onClick={handleBack} disabled={!hasBack}>
+            <button
+              className="back-button"
+              onClick={handleBack}
+              disabled={!hasBack}
+            >
               Back
             </button>
-            <button className="next-button" onClick={handleNext} disabled={!hasNext}>
-              Next
-            </button>
+            {hasNext && (
+              <button
+                className="next-button"
+                onClick={handleNext}
+                disabled={!hasNext}
+              >
+                Next
+              </button>
+            )}
+            {!hasNext && (
+              <button className="print-button" onClick={handlePrint}>
+                Print
+              </button>
+            )}
           </div>
         </section>
         <section className="resume">
