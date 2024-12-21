@@ -96,7 +96,6 @@ function App() {
   return (
     <>
       <Header currentStep={currentStep} />
-      Form Steps
       <main>
         <section className="steps-data">
           <CurrentStepComponent
@@ -107,15 +106,15 @@ function App() {
             addArrayItem={addArrayItem}
           />
           <div className="buttons-wrapper">
-            <button onClick={handleBack} disabled={!hasBack}>
+            <button className="back-button" onClick={handleBack} disabled={!hasBack}>
               Back
             </button>
-            <button onClick={handleNext} disabled={!hasNext}>
+            <button className="next-button" onClick={handleNext} disabled={!hasNext}>
               Next
             </button>
           </div>
         </section>
-        <section>
+        <section className="resume">
           <Resume formData={formData} />
         </section>
       </main>

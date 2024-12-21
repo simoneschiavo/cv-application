@@ -3,7 +3,7 @@ import DateRangeFormatted from "./DateRangeFormatted";
 
 export default function Resume({ formData }) {
   return (
-    <>
+    <div className="paper">
       <section className="about">
         <p className="full-name">
           {formData.firstName} {formData.lastName}
@@ -75,6 +75,6 @@ export default function Resume({ formData }) {
           </div>
         ))}
       </section>
-    </>
+    </div>
   );
 }
