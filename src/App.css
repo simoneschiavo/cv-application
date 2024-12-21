@@ -104,11 +104,67 @@ button:disabled {
 
 .resume {
   background-color: #ebebeb;
+  font-size: 0.75rem;
 }
 
 .resume > .paper {
   margin: 2rem;
-  padding: 1rem;
+  padding: 1rem 3rem;
   background-color: #fff;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.section-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.about {
   text-align: center;
+}
+
+.about > .full-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.about > .job-title {
+  font-size: 1rem;
+}
+
+.about > .bio {
+  padding-top: 1rem;
+}
+
+section.work-experience,
+section.projects,
+section.educations {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.work-experience .company-and-location {
+  display: flex;
+  gap: 0.25rem;
+  font-style: italic;
 }

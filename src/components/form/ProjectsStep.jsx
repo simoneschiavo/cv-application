@@ -76,6 +76,7 @@ export default function ProjectsStep({
                     e.target.value
                   )
                 }
+                rows={5}
               ></textarea>
             </div>
           </form>

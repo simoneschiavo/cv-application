@@ -32,7 +32,7 @@ export default function Resume({ formData }) {
         {formData.workExperiences.map((workExperience) => (
           <div key={workExperience.id}>
             <div className="section-row">
-              <p className="job-title">{workExperience.jobTitle}</p>
+              <p className="job-title bold">{workExperience.jobTitle}</p>
               <DateRangeFormatted startDate={workExperience.startDate} endDate={workExperience.endDate} />
             </div>
             <div className="company-and-location">
@@ -52,7 +52,7 @@ export default function Resume({ formData }) {
         {formData.projects.map((project) => (
           <div key={project.id}>
             <div className="section-row">
-              <p className="project-title">{project.title}</p>
+              <p className="project-title bold">{project.title}</p>
               <p className="project-time">
                 {project.startDate} - {project.endDate}
               </p>
@@ -66,7 +66,7 @@ export default function Resume({ formData }) {
         {formData.educations.map((education) => (
           <div key={education.id}>
             <div className="section-row">
-              <p className="institution-name">{education.institutionName}</p>
+              <p className="institution-name bold">{education.institutionName}</p>
               <p className="institution-time">
                 {education.startDate} - {education.endDate}
               </p>
