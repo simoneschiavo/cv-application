@@ -113,6 +113,18 @@ textarea {
   padding: 0.5rem 1rem;
 }
 
+input:focus,
+textarea:focus {
+  outline: 1px solid #f7a15a;
+  border-color: #f7a15a;
+}
+
+input:invalid,
+textarea:invalid {
+  outline: 1px solid #f75a5a;
+  border-color: #f75a5a;
+}
+
 button {
   padding: 0.5rem 3rem;
   border-radius: 20px;
