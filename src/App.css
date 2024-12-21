@@ -35,6 +35,10 @@ header > div:last-child {
   border-radius: 0 20px 20px 0;
 }
 
+header > div:hover {
+  cursor: not-allowed;
+}
+
 .header-current-step {
   background-color: white;
   border-color: #f7a15a;
