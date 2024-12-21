@@ -7,11 +7,14 @@ export default function DateRangeFormatted({ startDate, endDate }) {
     }).format(date);
   };
 
+  let formattedStartDate = startDate === "" ? "" : formatDate(startDate);
+  let formattedEndDate = endDate === "" ? "- Present" : formatDate(endDate);
+
   return (
     <>
       <p className="date-range">
-        {startDate === "" ? "" : formatDate(startDate)} -{" "}
-        {endDate === "" ? "Present" : formatDate(endDate)}
+        {formattedStartDate}
+        {formattedStartDate === "" ? "" : formattedEndDate}
       </p>
     </>
   );
