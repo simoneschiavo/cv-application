@@ -81,12 +81,16 @@ export default function ProjectsStep({
               ></textarea>
             </div>
           </form>
-          <button onClick={() => removeArrayItem("projects", index)}>
+          <button
+            className="delete-button"
+            onClick={() => removeArrayItem("projects", index)}
+          >
             Delete
           </button>
         </div>
       ))}
       <button
+        className="add-button"
         onClick={() =>
           addArrayItem("projects", {
             id: uuidv4(),

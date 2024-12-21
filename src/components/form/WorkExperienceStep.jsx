@@ -122,12 +122,16 @@ export default function WorkExperienceStep({
               ></textarea>
             </div>
           </form>
-          <button onClick={() => removeArrayItem("workExperiences", index)}>
+          <button
+            className="delete-button"
+            onClick={() => removeArrayItem("workExperiences", index)}
+          >
             Delete
           </button>
         </div>
       ))}
       <button
+        className="add-button"
         onClick={() =>
           addArrayItem("workExperiences", {
             id: uuidv4(),

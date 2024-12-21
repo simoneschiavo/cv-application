@@ -83,12 +83,16 @@ export default function EducationStep({
               />
             </div>
           </form>
-          <button onClick={() => removeArrayItem("educations", index)}>
+          <button
+            className="delete-button"
+            onClick={() => removeArrayItem("educations", index)}
+          >
             Delete
           </button>
         </div>
       ))}
       <button
+        className="add-button"
         onClick={() =>
           addArrayItem("educations", {
             id: uuidv4(),
