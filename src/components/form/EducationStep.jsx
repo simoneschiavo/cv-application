@@ -95,7 +95,7 @@ export default function EducationStep({
           <CircleX
             size={24}
             className="delete-button"
-            onClick={() => removeArrayItem("workExperiences", index)}
+            onClick={() => removeArrayItem("educations", index)}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           />

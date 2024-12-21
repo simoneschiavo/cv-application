@@ -112,6 +112,11 @@ button:disabled {
   color: #f75a5a;
 }
 
+.add-button {
+  background-color: #ebebeb;
+  border: 1px solid #b5b5b5;
+}
+
 .back-button {
   background-color: #fff;
   border: 1px solid #b5b5b5;

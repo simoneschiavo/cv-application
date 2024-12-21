@@ -93,7 +93,7 @@ export default function ProjectsStep({
           <CircleX
             size={24}
             className="delete-button"
-            onClick={() => removeArrayItem("workExperiences", index)}
+            onClick={() => removeArrayItem("projects", index)}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           />
